@@ -15,3 +15,10 @@ Formatted command
 --env-file=myenv.list \
 python_webdav \
 python backup.py```
+
+### Example of myenv.list
+
+```
+FTP_USER=*******
+FTP_PASS=********
+```
