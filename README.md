@@ -29,7 +29,7 @@ FTP_PASS=********
 
 
 # Todo
-- [ ] Backup a basic file
+- [x] ~Backup a basic file~
 - [ ] Backup recursively a basic folder
 - [ ] Python script must receive an argument (Interface initial: UK, DE, ....)
 - [ ] Investigate Restore development from prod or stage (put development in pristine state)
