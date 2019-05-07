@@ -9,13 +9,13 @@ Build image with Python 2 + webdav library
 
 ### Download an specific file from development:
 
-```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav python backup.py```
+```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav backup.py```
 
 ### Display the state of the switch in all interfaces:
-```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav python switch_state.py```
+```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav switch_state.py```
 
 ### Display the content of a file without download it:
-```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav python read_file.py```
+```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav read_file.py```
 
 
 ### Example of myenv.list
