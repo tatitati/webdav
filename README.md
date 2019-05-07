@@ -24,6 +24,7 @@ python backup.py
 ```
 FTP_USER=*******
 FTP_PASS=********
+FTP_URL=*****
 ```
 
 
