@@ -30,6 +30,7 @@ FTP_URL=*****
 
 
 # Todo
+- [ ] Functionality to know where is pointing each interface
 - [x] ~Create python image with webdav in linux to avoid problem with pycurl in windows~
 - [x] ~Backup a basic file~
 - [ ] Backup recursively a basic folder
