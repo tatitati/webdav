@@ -5,7 +5,7 @@ import easywebdav
 print("this is my script updated")
 print(os.environ['FTP_USER'])
 
-webdav = easywebdav.connect('asos-uk.custhelp.com', username=os.environ['FTP_USER'], password=os.environ['FTP_PASS'], protocol='https')
+webdav = easywebdav.connect(os.environ['FTP_URL'], username=os.environ['FTP_USER'], password=os.environ['FTP_PASS'], protocol='https')
 list = webdav.ls("/dav/cp/customer/development")
 
 # print(list)
