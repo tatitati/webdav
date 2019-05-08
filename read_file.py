@@ -18,20 +18,23 @@ for opt, arg in opts:
 	if opt in ('--environment'):
 		environment = arg
 	if opt in ('--file'):
-		file = arg		
+		pathfile = arg		
 
 
 webdav = easywebdav.connect(getInterfacesUrls(interface), username=os.environ['FTP_USER'], password=os.environ['FTP_PASS'], protocol='https')
 
-filePathInEnvironment = getPath(environment) + file
 
-def read(webdav, remote_path):	
-    response = webdav._send('GET', remote_path, 200, stream=True)
-    text = ''
-    for chunk in response.iter_content(DOWNLOAD_CHUNK_SIZE_BYTES):
-        text+=chunk
+def read(webdav, environment, pathfile):	
+	filePathInEnvironment = getPath(environment) + pathfile
 
-    return text
+	if(webdav.exists(filePathInEnvironment)):
+	    response = webdav._send('GET', filePathInEnvironment, 200, stream=True)
+	    text = ''
+	    for chunk in response.iter_content(DOWNLOAD_CHUNK_SIZE_BYTES):
+	        text+=chunk
 
-filetext = read(webdav, filePathInEnvironment)
-print(filetext)
+	    print(text)
+	else:
+		print("the file: " + filePathInEnvironment + " doesnt exist")		
+
+filetext = read(webdav, environment, pathfile)
