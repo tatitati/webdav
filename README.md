@@ -29,10 +29,11 @@ FTP_URL=*****
 
 
 # Todo
-- [x] Functionality to know where is pointing each interface
+- [x] ~Functionality to know where is pointing each interface~
 - [x] ~Create python image with webdav in linux to avoid problem with pycurl in windows~
 - [x] ~Backup a basic file~
-- [ ] Backup recursively a basic folder
+- [ ] Functionality to specify environment, interface and path in the CLI to backup, read, ...... :fire:
+- [ ] Backup recursively a folder from any environment
 - [ ] Python script must receive an argument (Interface initial: UK, DE, ....)
 - [ ] Investigate Restore development from prod or stage (put development in pristine state)
 - [ ] Investigate control version for backups from prod.
