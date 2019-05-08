@@ -1,3 +1,5 @@
+import sys, getopt
+
 def getInterfacesUrls(interfacekey):
 
 	mapInterface = {
@@ -25,3 +27,19 @@ def getPath(environment):
 	}
 
 	return mapPath[environment]
+
+def parseArgs():
+	opts, _ = getopt.getopt(sys.argv[1:], [], ['interface=', 'environment=', 'file='])
+
+	interfaceUrl = ''
+	environment = ''
+	file = ''
+	for opt, arg in opts:
+		if opt in ('--interface'):
+			interfaceUrl = getInterfacesUrls(arg)
+		if opt in ('--environment'):
+			environment = arg
+		if opt in ('--file'):			 		
+			pathfile = getPath(environment) + arg
+
+	return [interfaceUrl, environment, pathfile]
