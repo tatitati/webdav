@@ -15,7 +15,7 @@ Build image with Python 2 + webdav library
 ```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav switch_state.py```
 
 ### Display the content of a file without download it:
-```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav read_file.py```
+```docker run -v ~/Desktop/docker/webdav:/tmp --env-file=myenv.list python_webdav read_file.py --interface=it --environment=stg --file=models/custom/UrlFactory.php```
 
 
 ### Example of myenv.list
