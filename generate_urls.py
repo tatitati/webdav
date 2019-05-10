@@ -12,7 +12,8 @@ def getInterfacesUrls(interfacekey):
 		'eu': 'asos-eu.custhelp.com',
 		'cn': 'asos-cn.custhelp.com',
 		'kr': 'asos-kr.custhelp.com',
-		'se': 'asos-se.custhelp.com'
+		'se': 'asos-se.custhelp.com',
+		'ru': 'asos-ru.custhelp.com'
 	}
 
 	return mapInterface[interfacekey]
