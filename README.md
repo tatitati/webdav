@@ -30,9 +30,8 @@ FTP_PASS=********
 - [x] ~Functionality to know where is pointing each interface~
 - [x] ~Create python image with webdav in linux to avoid problem with pycurl in windows~
 - [x] ~Backup a basic file~
-- [ ] Functionality to specify environment, interface and path in the CLI to backup, read, ...... :fire:
-- [ ] Backup recursively a folder from any environment
-- [ ] Python script must receive an argument (Interface initial: UK, DE, ....)
+- [x] ~Functionality to specify environment, interface and path in the CLI to backup, read, ......~
+- [ ] Backup recursively a folder from any environment :fire:
 - [ ] Investigate Restore development from prod or stage (put development in pristine state)
 - [ ] Investigate control version for backups from prod.
 - [ ] Investigate sync between dev-interfaces. It might speed up replication.
