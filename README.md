@@ -1,10 +1,11 @@
 
-### Setup:
+## Setup:
 
 Build image with Python 2 + webdav library
 
 ```docker build -t python_webdav .```
 
+## Use cases: 
 ### Download an specific file from development (soon also folders):
 
 ```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav backup.py```
