@@ -21,11 +21,16 @@ def getInterfacesUrls(interfacekey):
 
 
 def getPath(environment):
+		
 	mapPath = {
 		'dev': '/dav/cp/customer/development/',
 		'stg': '/dav/cp/generated/staging/source/', 
 		'prod': '/dav/cp/generated/production/source/'		
 	}
+	
+	if(environment not in mapPath):
+		print("this environment doesnt exist. The available are: dev, stg, prod)")
+		sys.exit(0)
 
 	return mapPath[environment]
 
