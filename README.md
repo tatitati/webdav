@@ -1,6 +1,4 @@
 
-# Overview
-
 ### Setup:
 
 Build image with Python 2 + webdav library
@@ -24,7 +22,6 @@ Build image with Python 2 + webdav library
 ```
 FTP_USER=*******
 FTP_PASS=********
-FTP_URL=*****
 ```
 
 
