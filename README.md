@@ -13,8 +13,9 @@ Build image with Python 2 + webdav library
 
 ### Diff between files in different interface and environment
 
-```docker run -v C:\Users\Francisco.Albusac\Desktop\webdav:/tmp --env-file=myenv.list python_webdav compare_file.py --interface1=uk --interface2=uk --environment1=dev -
--environment2=stg --file=models/custom/UrlFactory.php```
+```
+docker run -v C:\Users\Francisco.Albusac\Desktop\webdav:/tmp --env-file=myenv.list python_webdav compare_file.py --interface1=uk --interface2=uk --environment1=dev --environment2=stg --file=models/custom/UrlFactory.php
+```
 
 ### Display the state of the switch in all interfaces:
 ```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav switch_state.py```
