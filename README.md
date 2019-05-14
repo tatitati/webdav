@@ -1,28 +1,30 @@
 
-### Setup:
+## Setup:
 
-Build image with Python 2 + webdav library
+1- Build image with Python 2 + webdav library
 
 ```docker build -t python_webdav .```
 
-### Download an specific file from development (soon also folders):
-
-```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav backup.py```
-
-### Diff between files in different interface and environment
-
-```docker run -v ~\Desktop\webdav:/tmp --env-file=myenv.list python_webdav compare_file.py --interface1=uk --interface2=uk --environment1=dev --environment2=stg --file=models/custom/UrlFactory.php```
-
-### Display the content of a file (without download it):
-```docker run -v ~/Desktop/docker/webdav:/tmp --env-file=myenv.list python_webdav read_file.py --interface=it --environment=stg --file=models/custom/UrlFactory.php```
-
-
-### Example of myenv.list
+2- Create a file named m"yenv.list" with the next structure, this file and the python code will be mounted in runtime to speed up debug and modification in code:
 
 ```
 FTP_USER=*******
 FTP_PASS=********
 ```
+
+## Use cases: 
+### - Download an specific file from development (soon also folders):
+
+```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav backup.py```
+
+### - Diff between files in different interface and environment
+
+```docker run -v ~\Desktop\webdav:/tmp --env-file=myenv.list python_webdav compare_file.py --interface1=uk --interface2=uk --environment1=dev --environment2=stg --file=models/custom/UrlFactory.php```
+
+### - Display the content of a file (without download it):
+```docker run -v ~/Desktop/docker/webdav:/tmp --env-file=myenv.list python_webdav read_file.py --interface=it --environment=stg --file=models/custom/UrlFactory.php```
+
+
 
 
 
