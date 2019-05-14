@@ -34,6 +34,20 @@ def getPath(environment):
 
 	return mapPath[environment]
 
+def getShortPath(environment):
+		
+	mapPath = {
+		'dev': 'development/',
+		'stg': 'staging/source/', 
+		'prod': 'production/source/'		
+	}
+	
+	if(environment not in mapPath):
+		print("this environment doesnt exist. The available are: dev, stg, prod)")
+		sys.exit(0)
+
+	return mapPath[environment]
+
 def parseArgs():
 	opts, _ = getopt.getopt(sys.argv[1:], [], ['interface=', 'environment=', 'file='])
 
