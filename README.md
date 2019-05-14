@@ -15,26 +15,18 @@ FTP_PASS=********
 ## Use cases: 
 ### - Download an specific file from development (soon also folders):
 
-```
-docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav backup.py
-```
+```docker run -v ~/Desktop/python/webdav:/tmp --env-file=myenv.list python_webdav backup.py```
 
 ### - Diff an specified file in different interfaces and environments
 
-```
-docker run -v ~\Desktop\webdav:/tmp --env-file=myenv.list python_webdav compare_file.py --interface1=uk --interface2=uk --environment1=dev --environment2=stg --file=models/custom/UrlFactory.php
-```
+```docker run -v ~\Desktop\webdav:/tmp --env-file=myenv.list python_webdav compare_file.py --interface1=uk --interface2=uk --environment1=dev --environment2=stg --file=models/custom/UrlFactory.php```
 
 ### - Diff a file in all the interfaces specified (in the same environment specified)
 
-```
-docker run -v C:\Users\Francisco.Albusac\Desktop\webdav:/tmp --env-file=myenv.list python_webdav comparefile_interfaces.py --interfaces="uk|de" --environment=stg --file=widgets/custom/HomeUIV2/AAQOrders/1.0/controller.php
-```
+```docker run -v C:\Users\Francisco.Albusac\Desktop\webdav:/tmp --env-file=myenv.list python_webdav comparefile_interfaces.py --interfaces="uk|de" --environment=stg --file=widgets/custom/HomeUIV2/AAQOrders/1.0/controller.php```
 
 ### - Display the content of a file (without download it):
-```
-docker run -v ~/Desktop/docker/webdav:/tmp --env-file=myenv.list python_webdav read_file.py --interface=it --environment=stg --file=models/custom/UrlFactory.php
-```
+```docker run -v ~/Desktop/docker/webdav:/tmp --env-file=myenv.list python_webdav read_file.py --interface=it --environment=stg --file=models/custom/UrlFactory.php```
 
 
 
