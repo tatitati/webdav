@@ -16,26 +16,22 @@ DOWNLOAD_CHUNK_SIZE_BYTES = 1 * 1024 * 1024
 
 
 
-opts, _ = getopt.getopt(sys.argv[1:], [], ['interfaces=', 'environment1=', 'environment2=', 'file='])
+opts, _ = getopt.getopt(sys.argv[1:], [], ['interfaces=', 'environment=', 'file='])
 
 interfaceUrls = []
-environment1 = ''
-environment2 = ''
-pathfile1 = ''
-pathfile2 = ''
+environment = ''
+pathfile = ''
+
 for opt, arg in opts:
 	if opt in ('--interfaces'):
 		interfacesList = arg.split('|')
 		print interfacesList
 		for interface in interfacesList:
 			interfaceUrls.append(getInterfacesUrls(interface))
-	if opt in ('--environment1'):
-		environment1 = arg		
-	if opt in ('--environment2'):
-		environment2 = arg
+	if opt in ('--environment'):
+		environment = arg		
 	if opt in ('--file'):			 		
-		pathfile1 = getPath(environment1) + arg		
-		pathfile2 = getPath(environment2) + arg			
+		pathfile = getPath(environment) + arg				
 
 def read(interfaceURL, webdav, environment, pathfile):	
 
@@ -53,14 +49,14 @@ def read(interfaceURL, webdav, environment, pathfile):
 
 
 webdav1 = easywebdav.connect(interfaceUrls[0], username=os.environ['FTP_USER'], password=os.environ['FTP_PASS'], protocol='https')
-filetext1 = read(interfaceUrls[0], webdav1, environment1, pathfile1)
+filetext1 = read(interfaceUrls[0], webdav1, environment, pathfile)
 
 for interfaceUrl in interfaceUrls[1:]:	
 	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 	print(interfaceUrls[0] + "        vs        " + interfaceUrl)
 	print("\n\n\n\n")
 	webdav2 = easywebdav.connect(interfaceUrl, username=os.environ['FTP_USER'], password=os.environ['FTP_PASS'], protocol='https')
-	filetext2 = read(interfaceUrl, webdav2, environment2, pathfile2)
+	filetext2 = read(interfaceUrl, webdav2, environment, pathfile)
 	if filetext2 != "":
 		result = difflib.unified_diff(filetext1.strip().splitlines(), filetext2.strip().splitlines(), fromfile=interfaceUrls[0], tofile=interfaceUrl,  lineterm='', n=6)
 		for line in result:
