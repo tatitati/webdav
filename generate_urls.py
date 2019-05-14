@@ -8,6 +8,7 @@ def getInterfacesUrls(interfacekey):
 		'de': 'asos-de.custhelp.com',
 		'sp': 'asos-sp.custhelp.com',
 		'it': 'asos-it.custhelp.com',	
+		'fr': 'asos-fr.custhelp.com',	
 		'us': 'asos-us.custhelp.com',
 		'eu': 'asos-eu.custhelp.com',
 		'cn': 'asos-cn.custhelp.com',
