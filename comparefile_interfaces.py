@@ -52,9 +52,9 @@ webdav1 = easywebdav.connect(interfaceUrls[0], username=os.environ['FTP_USER'], 
 filetext1 = read(interfaceUrls[0], webdav1, environment, pathfile)
 
 for interfaceUrl in interfaceUrls[1:]:	
-	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+	print("\n\n\n\n\n\n\n\n=====================================\n")
 	print(interfaceUrls[0] + "        vs        " + interfaceUrl)
-	print("\n\n\n\n")
+	print("\n=====================================\n\n")
 	webdav2 = easywebdav.connect(interfaceUrl, username=os.environ['FTP_USER'], password=os.environ['FTP_PASS'], protocol='https')
 	filetext2 = read(interfaceUrl, webdav2, environment, pathfile)
 	if filetext2 != "":
