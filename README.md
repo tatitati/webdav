@@ -28,7 +28,9 @@ FTP_PASS=********
 ### - Display the content of a file (without download it):
 ```docker run -v ~/Desktop/docker/webdav:/tmp --env-file=myenv.list python_webdav read_file.py --interface=it --environment=stg --file=models/custom/UrlFactory.php```
 
+### - Diff in an specific folder
 
+``` docker run -v ~/Desktop/docker/webdav:/tmp --env-file=myenv.list python_webdav compare_folder.py --interface1=com --interface2=com --environment1=prod --environment2=dev --file=models/custom```
 
 
 
